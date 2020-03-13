@@ -19,9 +19,6 @@
                         <a class="nav-item nav-link" href="{% url 'wishlist_index' %}">Wish List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item nav-link" href="{% url 'post_create' %}">New Post</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                     </li>
                     <li class="nav-item">
@@ -36,6 +33,10 @@
                     </li>
                     {% endif %}
                 </ul>
+                <!-- Navbar secondary -->
+                {% if "blog" in request.path %}
+                    {% include "blog/includes/sec_navbar.html" %}
+                {% endif %}
             </div>
         </div>
     </nav>
