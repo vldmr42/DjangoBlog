@@ -3,6 +3,8 @@ from django.views.generic import ListView, DetailView, CreateView, DeleteView, U
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import WishListItem
 
+from webpreview import web_preview
+
 
 # Create your views here.
 

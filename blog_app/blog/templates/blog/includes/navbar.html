@@ -35,7 +35,9 @@
                 </ul>
                 <!-- Navbar secondary -->
                 {% if "blog" in request.path %}
-                    {% include "blog/includes/sec_navbar.html" %}
+                    {% if user.is_authenticated %}
+                        {% include "blog/includes/sec_navbar.html" %}
+                    {% endif %}
                 {% endif %}
             </div>
         </div>
